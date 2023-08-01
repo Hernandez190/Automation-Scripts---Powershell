@@ -26,8 +26,6 @@ $testtcpconnection = Test-NetConnection -ComputerName $name -Port 5985 -WarningA
 $testpingconnection = Test-Connection -ComputerName $name -Count 1 -ErrorAction SilentlyContinue
 ##############################################################################
 
-##############################################################################
-
 if ($testtcpconnection.TcpTestSucceeded -eq $true){
 
     Write-Host -ForegroundColor Yellow "WinRM service is up and running" 
